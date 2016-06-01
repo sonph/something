@@ -17,7 +17,7 @@ html(lang='en')
     //- link(rel='canonical' href='{{ page.url | replace:'index.html''' | prepend: site.baseurl | prepend: site.url }}')
     //- link(rel='alternate' type='application/rss+xml' title='{{ site.title }}' href='{{ ' |='' prepend:='' site.baseurl='' site.url='')
 
-    link(rel='stylesheet' type='text/css' href='{{ "/css/app.css" | prepend: site.baseurl }}')
+    link(rel='stylesheet' type='text/css' href='/css/app.css')
     script(type='text/javascript' src='/js/app_head.js')
 
   body
@@ -25,4 +25,5 @@ html(lang='en')
 
     | {{ content }}
 
+    script(type='text/javascript' src='/js/scale.fix.js')
     script(type='text/javascript' src='/js/app_body.js')
