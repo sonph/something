@@ -1,0 +1,8 @@
+{
+  "name": "sonph.github.io",
+  "version": "1.0.0",
+  "devDependencies": {
+    "jstransformer-markdown": "^1.1.0",
+    "pug-cli": "^1.0.0-alpha5"
+  }
+}
