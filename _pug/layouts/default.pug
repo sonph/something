@@ -21,9 +21,24 @@ html(lang='en')
     script(type='text/javascript' src='/js/app_head.js')
 
   body
-    h1 Default Template
+    .wrapper
+      header
+        a(href="/")
+          h1 Default Template
+        p A Theme for GitHub Pages
+        nav
+          ul
+            li
+              a(href="/") /home
+            li
+              a(href="/projects") /projects
+            li
+              a(href="/posts") /posts
+            li
+              a(href="/about") /about
 
-    | {{ content }}
+      section
+        | {{ content }}
 
     script(type='text/javascript' src='/js/scale.fix.js')
     script(type='text/javascript' src='/js/app_body.js')
