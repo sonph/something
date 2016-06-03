@@ -104,6 +104,17 @@ header
     list-style: none
     padding-left: 0
 
+  li
+    width: 60px
+    margin-right: 10px
+    text-align: center
+    display: inline-block
+    overflow-x: visible
+    white-space: nowrap
+
+  li:last-child
+    margin-right: 0
+
   a
     border: none
 
@@ -133,7 +144,7 @@ footer
   -webkit-font-smoothing: subpixel-antialiased
 
 
-.post-meta
+.meta, .post-meta
   font-style: italic
 
 .post-list
@@ -160,6 +171,12 @@ footer
 .right
   float: right
 
+.text-right
+  text-align: right
+
+.post-title
+  font-size: 1.5em
+
 @media print, screen and (max-width: 960px)
   body
     max-width: 75%
@@ -180,17 +197,17 @@ footer
   header
     a small
       display: inline
-    ul
+    nav
       position: absolute
       right: 14%
-      top: 50px
+      top: 65px
 
 @media print, screen and (max-width: 720px)
   body
     word-wrap: break-word
   header
     padding: 0
-    ul, p.view
+    nav
       position: static
   pre, code
     word-wrap: normal
@@ -199,7 +216,7 @@ footer
   body
     padding: 15px
   header
-    ul
+    nav
       width: 99%
 
 @media print
