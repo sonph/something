@@ -18,6 +18,7 @@ html(lang='en')
     //- link(rel='alternate' type='application/rss+xml' title='{{ site.title }}' href='{{ ' |='' prepend:='' site.baseurl='' site.url='')
 
     link(rel='stylesheet' type='text/css' href='/css/app.css')
+    link(rel='stylesheet' type='text/css' href='/css/font-awesome.min.css')
     script(type='text/javascript' src='/js/app_head.js')
 
   body
@@ -36,6 +37,19 @@ html(lang='en')
               a(href="/posts") /posts
             li
               a(href="/about") /about
+          ul
+            li
+              a(href="/")
+                i.fa.fa-github
+            li
+              a(href="/")
+                i.fa.fa-linkedin
+            li
+              a(href="/")
+                i.fa.fa-twitter
+            li
+              a(href="/")
+                i.fa.fa-facebook
 
       section
         | {{ content }}
