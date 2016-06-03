@@ -5,12 +5,12 @@ html(lang='en')
     meta(http-equiv='X-UA-Compatible' content='IE=edge')
     meta(name='viewport' content='width=device-width, initial-scale=1')
 
-    title
-      | {% if page.title %}
-      | {{ page.title | escape }}
-      | {% else %}
-      | {{ site.title | escape }}
-      | {% endif %}
+    title.
+      {% if page.title %}
+      {{ page.title | escape }}
+      {% else %}
+      {{ site.title | escape }}
+      {% endif %}
 
     meta(name='description' content='{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}')
 
@@ -29,14 +29,10 @@ html(lang='en')
         p A Theme for GitHub Pages
         nav
           ul
-            li
-              a(href="/") /home
-            li
-              a(href="/projects") /projects
-            li
-              a(href="/posts") /posts
-            li
-              a(href="/about") /about
+            li #[a(href="/") /home]
+            li #[a(href="/projects") /projects]
+            li #[a(href="/posts") /posts]
+            li #[a(href="/about") /about]
           ul
             li
               a(href="https://github.com/sonph" target='_blank')
@@ -51,23 +47,16 @@ html(lang='en')
               a(href="https://facebook.com/s0nnyftw" target='_blank')
                 i.fa.fa-facebook
 
-      section
-        | {{ content }}
+      section.
+        {{ content }}
 
-      footer
-        | Built with 
-        a(href='http://jekyllrb.com') Jekyll
-        | and 
-        a(href='http://jade-lang.org') Pug
-        | . Hosted with 
-        a(href='https://pages.github.com' target='_blank') Github Pages
-        | . Theme based on 
-        a(href='https://github.com/orderedlist/minimal' target='_blank') minimal
-        | . And 
-        a(href='https://fontawesome.io' target='_blank') Font Awesome
-        | . Content by 
-        a(href='/about') @sonph
-        | .
+      footer.
+        Built with #[a(href='http://jekyllrb.com') Jekyll]
+        and #[a(href='http://jade-lang.org') Pug].
+        Hosted with #[a(href='https://pages.github.com' target='_blank') Github Pages].
+        Theme based on #[a(href='https://github.com/orderedlist/minimal' target='_blank') Minimal].
+        And #[a(href='https://fontawesome.io' target='_blank') Font Awesome].
+        Content by #[a(href='/about') @sonph].
 
     script(type='text/javascript' src='/js/scale.fix.js')
     script(type='text/javascript' src='/js/app_body.js')
