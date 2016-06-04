@@ -1,5 +1,7 @@
-title: sonpham.me
+title: "@sonph"
 description: ""
 baseurl: ""
 url: "http://sonpham.me"
 markdown: kramdown
+# permalink: /:categories/:title # FOR THE FUTURE
+permalink: /posts/:title

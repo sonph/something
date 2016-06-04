@@ -5,6 +5,7 @@
 .home
   h1 Posts
   ul.post-list
+    //- | {% for post in site.categories.posts limit: 5 %} FOR THE FUTURE
     | {% for post in site.posts limit: 5 %}
     li
       div
@@ -14,5 +15,7 @@
 
       .post-meta.post-excerpt
         | {{ post.excerpt }}
-
     | {% endfor %}
+
+  p.meta.text-right
+    a(href='/posts') See all posts...
