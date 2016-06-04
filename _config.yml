@@ -5,3 +5,5 @@ url: "http://sonpham.me"
 markdown: kramdown
 # permalink: /:categories/:title # FOR THE FUTURE
 permalink: /posts/:title
+gems:
+  - jekyll-sitemap
