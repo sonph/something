@@ -3,8 +3,7 @@ description: "Son A. Pham's personal website."
 baseurl: ""
 url: "http://sonpham.me"
 markdown: kramdown
-# permalink: /:categories/:title # FOR THE FUTURE
-permalink: /posts/:title
+permalink: /:categories/:title
 author: sonph
 gems:
   - jekyll-sitemap
