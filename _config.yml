@@ -1,9 +1,12 @@
 title: "@sonph"
-description: ""
+description: "Son A. Pham's personal website."
 baseurl: ""
 url: "http://sonpham.me"
 markdown: kramdown
 # permalink: /:categories/:title # FOR THE FUTURE
 permalink: /posts/:title
+author: sonph
 gems:
   - jekyll-sitemap
+  - jekyll-seo-tag
+  - jekyll-feed

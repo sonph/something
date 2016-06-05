@@ -24,6 +24,13 @@ html(lang='en')
     script(type='text/javascript' src='/assets/js/app.js' async)
     script(type='text/javascript' src='/assets/js/scale.fix.js' async)
 
+    // seo
+    | {% seo %}
+    // end-seo
+
+    // feed
+    | {% feed_meta %}
+    // end-feed
   body
     .wrapper
       header
