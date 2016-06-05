@@ -7,5 +7,5 @@ permalink: /:categories/:title
 author: sonph
 gems:
   - jekyll-sitemap
-  - jekyll-seo-tag
   - jekyll-feed
+logo: "/assets/images/favicon.png"

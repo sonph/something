@@ -5,32 +5,66 @@ html(lang='en')
     meta(http-equiv='X-UA-Compatible' content='IE=edge')
     meta(name='viewport' content='width=device-width, initial-scale=1')
 
-    title.
-      {% if page.title %}
-      {{ page.title | escape }}
-      {% else %}
-      {{ site.title | escape }}
-      {% endif %}
-
-    meta(name='description' content='{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}')
-
-    //- link(rel='canonical' href='{{ page.url | replace:'index.html''' | prepend: site.baseurl | prepend: site.url }}')
-    //- link(rel='alternate' type='application/rss+xml' title='{{ site.title }}' href='{{ ' |='' prepend:='' site.baseurl='' site.url='')
-
+    // css/js
     link(rel='stylesheet' type='text/css' href='/assets/css/app.css')
     link(rel='stylesheet' type='text/css' href='/assets/font-awesome-4.6.3/css/font-awesome.min.css')
     link(rel='shortcut icon' type='image/png' href='/assets/images/favicon.png')
 
     script(type='text/javascript' src='/assets/js/app.js' async)
     script(type='text/javascript' src='/assets/js/scale.fix.js' async)
-
-    // seo
-    | {% seo %}
-    // end-seo
+    // end-css/js
 
     // feed
     | {% feed_meta %}
     // end-feed
+
+    // meta
+    - var title="{% if page.title %}{{ page.title | escape }} |{% endif %}{{ site.title | escape }}"
+    - var description="{% if page.title %}{{ page.excerpt | escape }}{% else %}{{ site.description }}{% endif %}"
+    - var pageurl="{% assign meta_url = site.url | append: site.baseurl %}{{ page.url | prepend: meta_url }}"
+
+    title= title
+    meta(property="og:title" content=title)
+    meta(property="og:site_name" content=title)
+
+    meta(name="description" content=description)
+    meta(property="og:description" content=description)
+
+    link(rel="canonical" href=pageurl)
+    meta(property="og:url" content=pageurl)
+
+    script(type='application/ld+json').
+      {% if page.categories %}
+      {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "headline": "{{ page.title }}",
+        "datePublished": "{{ page.date | date: '%Y-%m-%d' }}",
+        "dateModified": "{% if page.dateModified %}{{ page.dateModified | date: '%Y-%m-%d' }}{% else %}{{ page.date | date: '%Y-%m-%d' }}{% endif %}",
+        "description": "{{ page.excerpt | remove: '<p>' | remove: '</p>' }}",
+        "url": "#[=pageurl]",
+        "author": "{{ site.author }}",
+        "publisher": {
+          "@type": "WebSite",
+          "name": "{{ site.title }}"
+        },
+        "image": {
+          "@type": "ImageObject",
+          "url": "{% if page.image %}{{ page.image | prepend: site.baseurl | prepend: site.url }}{% else %}{{ site.logo | prepend: site.url }}{% endif %}"
+        }
+      }
+      {% else %}
+      {
+        "@context": "http://schema.org",
+        "@type": "WebSite",
+        "name": "{{ site.title }}",
+        "headline": "{{ site.title }}",
+        "description": "{{ site.description }}",
+        "url": "#[=pageurl]"
+      }
+      {% endif %}
+    // end-meta
+
   body
     .wrapper
       header
