@@ -8,4 +8,7 @@ author: sonph
 gems:
   - jekyll-sitemap
   - jekyll-feed
-logo: "/assets/images/favicon.png"
+logo: "favicon.png"
+
+# Images dir relative to the site url.
+images_dir: "assets/images"

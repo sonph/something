@@ -20,19 +20,26 @@ html(lang='en')
 
     // meta
     - var title="{% if page.title %}{{ page.title | escape }} |{% endif %}{{ site.title | escape }}"
-    - var description="{% if page.title %}{{ page.excerpt | escape }}{% else %}{{ site.description }}{% endif %}"
+    - var description="{% if page.title %}{{ page.excerpt | remove: '<p>' | remove: '</p>' }}{% else %}{{ site.description }}{% endif %}"
     - var pageurl="{% assign meta_url = site.url | append: site.baseurl %}{{ page.url | prepend: meta_url }}"
+    - var imageurl="{% if page.image %}{{ page.image | prepend: site.images_dir | prepend: site.url }}{% else %}{{ site.logo | prepend: site.images_dir | prepend: site.url }}{% endif %}"
+    - var ogtype="{% if page.categories %}article{% else %}website{% endif %}"
 
     title= title
+    meta(name="description" content!=description)
+    link(rel="canonical" href=pageurl)
+
+    //- Facebook open graph rich data markup.
+    //- https://developers.facebook.com/docs/sharing/webmasters#markup
     meta(property="og:title" content=title)
     meta(property="og:site_name" content=title)
-
-    meta(name="description" content=description)
-    meta(property="og:description" content=description)
-
-    link(rel="canonical" href=pageurl)
+    meta(property="og:description" content!=description)
     meta(property="og:url" content=pageurl)
+    meta(property="og:image" content=imageurl)
+    meta(property="og:type" content=ogtype)
 
+    //- Google schema.org ld+json rich data markup
+    //- https://developers.google.com/search/docs/guides/intro-structured-data#markup-formats-and-placement
     script(type='application/ld+json').
       {% if page.categories %}
       {
@@ -50,7 +57,7 @@ html(lang='en')
         },
         "image": {
           "@type": "ImageObject",
-          "url": "{% if page.image %}{{ page.image | prepend: site.baseurl | prepend: site.url }}{% else %}{{ site.logo | prepend: site.url }}{% endif %}"
+          "url": "#[=imageurl]"
         }
       }
       {% else %}
