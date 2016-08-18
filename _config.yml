@@ -1,7 +1,10 @@
 title: "@sonph"
 description: "Son A. Pham's personal website."
 baseurl: ""
+
+# Site url must not end with a /
 url: "http://sonpham.me"
+
 markdown: kramdown
 permalink: /:categories/:title
 author: sonph
