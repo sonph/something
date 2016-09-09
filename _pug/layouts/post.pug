@@ -5,7 +5,7 @@
 article.post
   .post-header
     h1.post-title {{ page.title }}
-    p.post-meta
+    p.post-meta.post-date
       time {{ page.date | date: "%b %-d, %Y" }}
 
   .post-content {{ content }}
