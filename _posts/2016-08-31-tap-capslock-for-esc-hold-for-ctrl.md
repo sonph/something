@@ -10,17 +10,23 @@ Today I stumbled upon a post by Brendon Rapp on economyofeffort.com titled "_Bey
 
 > tl;dr: Supercharge your Caps Lock key by making it Esc when tapped, and Ctrl when held.
 
-Read that again. __CapsLock key acts as Esc when tapped, Ctrl when held down__?
+Read that again. _CapsLock key acts as Esc when tapped, Ctrl when held down_?
 
-_Mind = blown_ 😱💥😵 _, amirite?_
+_Mind = blown_ 😱💥😵 _, right?_
 
-I have never used the CapsLock key as I've always held the Shift key to type in UPPERCASE, and as a Vim user most of the time I have CapsLock mapped to Ctrl via macOS' System Preferences. This way my pinky doesn't have to awkwardly reach for the Ctrl key at the corner of the keyboard, which I do hundreds of times a day.
+If it isn't immediately obvious to you, pressing `CapsLock-C` sends `Ctrl-C`, while tapping `CapsLock` by itself sends an `Esc`.
 
-Yes yes, I know you can alternatively press `Ctrl-C` instead of Esc, but having Esc right under your pinky, system wide? Totally cool stuffs👌!
+## Why it's amazing
 
-Another reason for my excitement is that I'm using the Pok3r RGB keyboard, which combines the grave (<code>`</code>) key with the Esc key under one keycap. This means that I can't have the keyboard configured in anyway that makes pressing both of them in one keystroke each.
+I never use the `CapsLock` key to type in UPPERCASE, so I always have it mapped to `Ctrl` via macOS' System Preferences. This way my pinky doesn't have to awkwardly reach for the `Ctrl` key at the corner of the keyboard, which I do hundreds of times a day (especially in the terminal and Vim).
 
-Anyway, the [post][1] has instructions for setting this up under both macOS and Linux. Go and check it out!
+Yes yes, I know you can alternatively press `Ctrl-C` instead of `Esc` in Vim, but having `Esc` right under your pinky, system wide? Totally cool stuffs👌!
+
+Another reason for my excitement is that I'm using the [Pok3r RGB](https://www.instagram.com/p/BJMSxxxBUW4/?taken-by=_sonph) 60% keyboard, which combines the grave (<code>`</code>) key with `Esc` under the same keycap. This means that I can't have the keyboard configured in anyway that makes it possible to press either in one keystroke each.
+
+## How to caps
+
+The [post][1] has instructions for setting this up on both macOS and Linux (sorry Windows users!). Go check it out!
 
 In case the post ever goes away, here's how you do it on macOS:
 
