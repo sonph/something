@@ -1,6 +1,6 @@
 ---
 layout: post
-title: How to: Update Pok3r/RGB firmware on macOS
+title: "How to: Update Pok3r/RGB firmware on macOS"
 date: 2016-08-17
 categories: posts
 tags: [macos, pok3r, virtualbox]
