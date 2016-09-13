@@ -46,7 +46,7 @@ Here I published patch 0.1.3 of my [spacegray-light-neue-ui](https://atom.io/the
 
 4. Republish the patch.
 
-        $ apm unpublish spacegray-light-neue-ui@0.1.3
+        $ apm unpublish spacegray-light-neue-ui@0.1.3  # Note 0.1.3 not v0.1.3
         $ apm publish patch
 
 5. Profits!
