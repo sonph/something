@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Tap CapsLock for Esc, Hold for Ctrl
+title: Tap CapsLock for Esc, hold for Ctrl
 date: 2016-08-31
 categories: posts
 tags: [productivity, keyboard, karabiner, seil, capslock]

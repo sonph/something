@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 8 Tips on Practicing Track Stand
+title: 8 tips on practicing track stand
 date: 2016-08-29
 categories: posts
 tags: [fixedgear, trackstand]
