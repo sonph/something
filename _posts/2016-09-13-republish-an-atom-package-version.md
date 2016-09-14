@@ -10,10 +10,9 @@ Sometimes right after publishing a new version for your amazing Atom package, yo
 
 __NOTE__: similar to force pushing to a remote git repo, this _might_ cause conflicts and should only be used sparingly.
 
-__PRO TIP__: _Diff twice, push once._
+__GIT PRO TIP__: _Diff twice, push once._
 
-Here I published patch 0.1.3 of my [spacegray-light-neue-ui](https://atom.io/themes/spacegray-light-neue-ui) theme but forgot to add the CHANGELOG entry.
-
+In this example I published patch `v0.1.3` of my [spacegray-light-neue-ui](https://atom.io/themes/spacegray-light-neue-ui) Atom theme but forgot to add an entry in the CHANGELOG for this patch.
 
 1. Revert to the latest commit before the tag on both local and remote.
 
