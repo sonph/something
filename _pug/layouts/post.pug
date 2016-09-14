@@ -7,6 +7,10 @@ article.post
     h1.post-title {{ page.title }}
     p.post-meta.post-date
       time {{ page.date | date: "%b %-d, %Y" }}
+    p.post-meta.post-tag
+      | {% for tags in page.tags %}
+      | \#{{tags}}
+      | {% endfor %}
 
   .post-content {{ content }}
 
