@@ -10,26 +10,25 @@ $monospace-font-stack: Menlo, Monaco, Bitstream Vera Sans Mono, Lucida Console, 
 body
   background-color: #fff
   padding: 50px
-  font-family: $serif-font-stack
+  font-family: $sans-serif-font-stack
+  font-weight: 300
   color: #444
-  font-weight: 400
   font-size: 16px
   line-height: 1.8
 
 h1, h2, h3, h4, h5, h6
-  font-family: $sans-serif-font-stack
-  font-weight: 300
   color: #222
   margin: 0 0 20px
-
-p, ul, ol, table, pre, dl
-  margin: 0 0 20px
+  font-weight: 300
 
 h1, h2, h3
   line-height: 1.2
 
 h1
   font-size: 34px
+
+p, ul, ol, table, pre, dl
+  margin: 0 0 20px
 
 a
   color: #39c
@@ -61,13 +60,12 @@ code
 
 pre
   color: #333
-  font-size: 12px
+  font-size: 13px
   padding: 8px 15px
   background: #f8f8f8
   // border-radius: 5px
   border: 1px solid #f0f0f0
   overflow-x: auto
-
   code
     background-color: #f8f8f8
     padding: 0
@@ -102,26 +100,16 @@ header
   float: left
   position: fixed
   -webkit-font-smoothing: subpixel-antialiased
-
   ul
     list-style: none
     padding-left: 0
     margin-bottom: 20px
-
-  li
-    width: 25%
-    text-align: center
-    display: inline-block
-    overflow-x: visible
-    white-space: nowrap
-
-  a
-    font-family: $sans-serif-font-stack
-    font-weight: 300
-
-footer
-  font-family: $sans-serif-font-stack
-  font-weight: 300
+    li
+      width: 25%
+      text-align: center
+      display: inline-block
+      overflow-x: visible
+      white-space: nowrap
 
 strong
   color: #222
@@ -149,20 +137,16 @@ footer
   -webkit-font-smoothing: subpixel-antialiased
   color: #bbb
   font-size: 0.8em
-  a
-    border: none
 
 .text-center
   text-align: center
 
-.post-date
-  color: #aaa
-  font-size: 0.8em
+.post-content, .post-excerpt
+  font-family: $serif-font-stack
 
 .post-list
   list-style: none
   padding-left: 0
-
   li
     margin-bottom: 2em
 
@@ -176,9 +160,9 @@ footer
   .post-excerpt
     clear: both
 
-.post-date, .post-tag
+.post-date, .post-tag, .post-comments
   color: #aaa
-  font-size: 0.8em
+  font-size: 0.9em
   font-family: $sans-serif-font-stack
 
 .left
