@@ -1,10 +1,9 @@
 ---
-layout: default
+title: About
+layout: post
+permalink: /about
+tags: [meta]
 ---
-
-# About
-
-
 ## ...Me
 
 <figcaption id="profile-pic">
