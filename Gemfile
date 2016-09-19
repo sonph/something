@@ -1,4 +1,5 @@
 # install with `gem install --file Gemfile`
+# or `bundle install`
 
 source 'https://rubygems.org'
 
