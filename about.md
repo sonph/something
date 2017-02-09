@@ -11,7 +11,7 @@ tags: [meta]
 	<div>*le me in San Francisco, 2015</div>
 </figcaption>
 
-Yo! Hello!
+Yo! Hello world!
 
 Welcome to my little corner on the vast, vast Internet! Glad you stopped by.
 
