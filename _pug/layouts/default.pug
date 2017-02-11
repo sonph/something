@@ -19,7 +19,7 @@ html(lang='en')
     // end-feed
 
     // meta
-    - var title="{% if page.title %}{{ page.title | escape }} |{% endif %}{{ site.title | escape }}"
+    - var title="{% if page.title %}{{ page.title | escape }} | {% endif %}{{ site.title | escape }}"
     - var description="{% if page.title %}{{ page.excerpt | remove: '<p>' | remove: '</p>' }}{% else %}{{ site.description }}{% endif %}"
     - var pageurl="{% assign meta_url = site.url | append: site.baseurl %}{{ page.url | prepend: meta_url }}"
     - var imageurl="{% if page.image %}{{ page.image | prepend: site.images_dir | prepend: site.url }}{% else %}{{ site.logo | prepend: site.images_dir | prepend: site.url }}{% endif %}"
