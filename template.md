@@ -12,7 +12,7 @@ tags or formatting is used, double check that they don't get escaped.
 ## TODO(sonph): Writing tips in `template.md` #15
 - Tip 1: First draft will always be terrible. Jot down as much as you can, take a break, then come back and edit it.
 
-Post attributes:
+## Post attributes:
 - `dateModified: 2016-06-01`: date the post has been modified. For the first revision `dateModified` is the same as `date`.
 - `categories: posts` (one of `[posts, projects, r]`)
 - `image: someimage.gif`: URL of an image that is representative of the post, for [`jekyll-feed`][1]; `/assets/images` is implied
@@ -28,12 +28,17 @@ Violets are blue
 Roses are red  
 Violets are blue
 
+# Header 1
+
 ## Header 2 {#header2}
 
 ### Header 3
 
 #### Header 4 {#header4}
 
+---
+
+## Links
 [link](http://)
 
 [link][1]
