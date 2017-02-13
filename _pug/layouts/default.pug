@@ -10,8 +10,16 @@ html(lang='en')
     link(rel='stylesheet' type='text/css' href='/assets/font-awesome-4.6.3/css/font-awesome.min.css')
     link(rel='shortcut icon' type='image/png' href='/assets/images/favicon.png')
 
-    script(type='text/javascript' src='/assets/js/app.js' async)
     script(type='text/javascript' src='/assets/js/scale.fix.js' async)
+    | {% if page.categories %}
+    //- Posts specific js.
+    script(type='text/javascript' src='/assets/js/jquery-3.1.1.min.js')
+    script(type='text/javascript' src='/assets/js/jquery.smooth-scroll-2.1.2.min.js')
+    script(type='text/javascript' src='/assets/js/contents.js')
+    script(type='text/javascript' src='/assets/js/app.posts.js')
+    | {% else %}
+    //- General site js.
+    | {% endif %}
     // end-css/js
 
     // feed
@@ -96,6 +104,11 @@ html(lang='en')
             li
               a(href="https://facebook.com/sonph86" target='_blank')
                 i.fa.fa-lg.fa-facebook
+
+        | {% if page.categories %}
+        hr
+        aside.contents.
+        | {% endif %}
 
       section.
         {{ content }}
