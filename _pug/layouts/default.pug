@@ -27,8 +27,8 @@ html(lang='en')
     // end-feed
 
     // meta
-    - var title="{% if page.title %}{{ page.title | escape }} | {% endif %}{{ site.title | escape }}"
-    - var description="{% if page.title %}{{ page.excerpt | remove: '<p>' | remove: '</p>' }}{% else %}{{ site.description }}{% endif %}"
+    - var title="{% if page.title %}{{ page.title | strip_html | escape }} | {% endif %}{{ site.title | strip_html | escape }}"
+    - var description="{% if page.title %}{{ page.excerpt | strip_html | escape }}{% else %}{{ site.description | strip_html | escape }}{% endif %}"
     - var pageurl="{% assign meta_url = site.url | append: site.baseurl %}{{ page.url | prepend: meta_url }}"
     - var imageurl="{% if page.image %}{{ page.image | prepend: site.images_dir | prepend: site.url }}{% else %}{{ site.logo | prepend: site.images_dir | prepend: site.url }}{% endif %}"
     - var ogtype="{% if page.categories %}article{% else %}website{% endif %}"
@@ -56,7 +56,7 @@ html(lang='en')
         "headline": "{{ page.title }}",
         "datePublished": "{{ page.date | date: '%Y-%m-%d' }}",
         "dateModified": "{% if page.dateModified %}{{ page.dateModified | date: '%Y-%m-%d' }}{% else %}{{ page.date | date: '%Y-%m-%d' }}{% endif %}",
-        "description": "{{ page.excerpt | remove: '<p>' | remove: '</p>' }}",
+        "description": "{{ page.excerpt | remove: '<p>' | remove: '</p>' | strip_html | escape }}",
         "url": "#[=pageurl]",
         "author": "{{ site.author }}",
         "publisher": {
