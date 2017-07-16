@@ -4,6 +4,7 @@ title: Tap CapsLock for Esc, hold for Ctrl
 date: 2016-08-31
 categories: posts
 tags: [productivity, keyboard, karabiner, seil, capslock]
+published: false
 ---
 
 Today I stumbled upon a post by Brendon Rapp on economyofeffort.com titled "_Beyond Ctrl: Make That Caps Lock Key Useful_".

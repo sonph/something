@@ -4,6 +4,7 @@ title: 8 tips on practicing track stand
 date: 2016-08-29
 categories: posts
 tags: [fixedgear, trackstand]
+published: false
 ---
 
 I just learned how to track stand on my fixed gear over the weekend and have these 8 tips to help you practice this one ~~weird~~ cool trick! 🚴 ⚖ 😆 🙌 👌
