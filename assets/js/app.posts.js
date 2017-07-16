@@ -1,3 +1,5 @@
+// Function to grab the headers and display in the aside as a small interactive
+// table of contents.
 $(function () {
   var link,
       contents;
@@ -31,7 +33,10 @@ $(function () {
   contents = gajus
       .contents({
         contents: $('aside.contents')[0],
-        articles: $('article').find('h1, h2, h3, h4, h5, h6').get(),
+        // h1 is omitted here because it's the article title. Some articles
+        // don't have any subsections and so we don't want to just re-display
+        // the article title on the aside.
+        articles: $('article').find('h2, h3, h4, h5, h6').get(),
       });
 
   contents.eventProxy.on('ready', function () {

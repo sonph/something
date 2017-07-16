@@ -109,7 +109,9 @@ html(lang='en')
                 i.fa.fa-lg.fa-facebook
 
         | {% if page.categories %}
+        //- TODO: remove this hr tag if no subsections are found.
         hr
+        //- Used to house the table of contents (app.posts.js).
         aside.contents.
         | {% endif %}
 
