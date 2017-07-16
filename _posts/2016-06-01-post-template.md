@@ -67,7 +67,9 @@ for d in dicts:
   ___|_____________
 </pre>
 
-> This is a block quote
+> Before I publish a new essay, I read it out loud and fix everything that doesn't sound like conversation.
+
+> Write in spoken language. You don't need complex sentences to express complex ideas.
 
 ![an image](http://placehold.it/350x150)
 ![an image](http://placehold.it/550x150)
