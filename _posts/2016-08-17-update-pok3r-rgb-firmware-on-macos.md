@@ -25,7 +25,7 @@ simple, and I'll show you how.
 
 _This process also works for the regular Pok3r_.
 
-## Step 1: Download VirtualBox and a _free_ Windows virtual machine
+## Download VirtualBox and a _free_ Windows virtual machine
 You heard that right, _free_ as in _free beer_. It's a VM provided _by
 Microsoft_ for users to test drive Microsoft Edge and IE 8-11, supposedly.
 [Modern.ie](http://modern.ie) (get it?) redirects here.
@@ -37,7 +37,7 @@ Download [VirtualBox for Mac](https://www.virtualbox.org/wiki/Downloads)
 
 The image weighs in at about 3.5GB.
 
-## Step 2: Load up the VM in VirtualBox
+## Load up the VM in VirtualBox
 Install VirtualBox, unzip the downloaded image and double click on the
 `.vmdk` file load it into VirtualBox. You can also click on
 _File > Import Appliance_ in the application to import.
@@ -53,7 +53,7 @@ Double click on the VM or click _Start_.
 
 <img class="no-shadow" alt="pok3r-macos-virtualbox-vm" src="/assets/images/pok3r-macos-virtualbox-vm.png">
 
-## Step 3: Open up IE to download the firmware updater
+## Open up IE to download the firmware updater
 _Note_: The VM will capture your mouse and keyboard input, so anytime you want
 to _"escape"_ back to MacOS press the _right command_ key.
 
@@ -62,7 +62,7 @@ _Support_ page. Download the appropriate firmware and run it.
 
 ![pok3r-macos-updater](/assets/images/pok3r-macos-updater.png)
 
-## Step 4: Forward the keyboard to the VM
+## Forward the keyboard to the VM
 Press the right command key to escape back to MacOS. Click on the menubar of
 the running VM and select _Devices > USB > Holtek Semiconductor Inc._ (Holtek
 is the name of the company that makes the chip that powers the keyboard). The
@@ -75,10 +75,10 @@ updater window.
 
 ![pok3r-macos-updater-current](/assets/images/pok3r-macos-updater-current.png)
 
-## Step 5: Update!
+## Update!
 Click _OK_ to start updating the firmware! Profits!
 
-## Step 6: Clean up
+## Clean up
 Once the firmware is updated and confirmed, shut down the machine with
 _Command + Q_ and select _Power off the machine_. Quit Virtualbox and delete
 the loaded VM.
