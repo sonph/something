@@ -5,26 +5,29 @@ html(lang='en')
     meta(http-equiv='X-UA-Compatible' content='IE=edge')
     meta(name='viewport' content='width=device-width, initial-scale=1')
 
-    // css/js
+    //- css/js
     link(rel='stylesheet' type='text/css' href='/assets/css/app.css')
     link(rel='stylesheet' type='text/css' href='/assets/font-awesome-4.6.3/css/font-awesome.min.css')
     link(rel='shortcut icon' type='image/png' href='/assets/images/favicon.png')
 
+    //- mathjax for latex equations
+    script(type='text/javascript' src='http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML')
+
     script(type='text/javascript' src='/assets/js/scale.fix.js' async)
     | {% if page.categories %}
-    //- Posts specific js.
-    script(type='text/javascript' src='/assets/js/jquery-3.1.1.min.js')
-    script(type='text/javascript' src='/assets/js/jquery.smooth-scroll-2.1.2.min.js')
-    script(type='text/javascript' src='/assets/js/contents.js')
-    script(type='text/javascript' src='/assets/js/app.posts.js')
+      //- Posts specific js.
+      script(type='text/javascript' src='/assets/js/jquery-3.1.1.min.js')
+      script(type='text/javascript' src='/assets/js/jquery.smooth-scroll-2.1.2.min.js')
+      script(type='text/javascript' src='/assets/js/contents.js')
+      script(type='text/javascript' src='/assets/js/app.posts.js')
     | {% else %}
-    //- General site js.
+      //- General site js.
     | {% endif %}
     // end-css/js
 
-    // feed
+    //- feed
     | {% feed_meta %}
-    // end-feed
+    //- end-feed
 
     // meta
     - var title="{% if page.title %}{{ page.title | strip_html | escape }} | {% endif %}{{ site.title | strip_html | escape }}"
