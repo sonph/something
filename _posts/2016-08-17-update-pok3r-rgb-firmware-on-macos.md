@@ -4,7 +4,6 @@ title: "How to: Update firmware for Pok3r (RGB) on macOS"
 date: 2016-08-17
 categories: posts
 tags: [macos, pok3r, virtualbox]
-published: false
 ---
 
 The Pok3r RGB is a beautiful little mechanical keyboard that works with MacOS perfectly out of the

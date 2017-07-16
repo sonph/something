@@ -4,7 +4,6 @@ title: "One year at Google"
 date: 2017-02-08
 categories: posts
 tags: [google, anniversary, googleversary]
-published: true
 ---
 
 Today is my first Googleversary! Woohoo!
