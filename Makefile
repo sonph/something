@@ -3,8 +3,7 @@ $(eval LOCAL_GEM_PATH=$(HOME)/.gem/ruby/2.0.0/bin)
 dev:
 	tmux split-window -h "bundle exec jekyll serve; echo 'Press any key to continue'; read"
 	./utils/pug.sh &
-	sleep 5
-	python -m webbrowser -t "http://localhost:4000"
+	@echo "open http://localhost:4000"
 
 install:
 	gem sources --add https://rubygems.org/
