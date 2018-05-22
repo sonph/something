@@ -1,16 +1,18 @@
 ---
 ---
 
-@import url(https://fonts.googleapis.com/css?family=Roboto:400,300|Source+Serif+Pro)
+// @import url(https://fonts.googleapis.com/css?family=Roboto:300,500|Source+Serif+Pro)
+@import url(https://fonts.googleapis.com/css?family=Source+Code+Pro:300,400)
 
-$serif-font-stack: 'Source Serif Pro', Georgia, Times, Times New Roman, serif
-$sans-serif-font-stack: 'Roboto', Helvetica, Arial, sans-serif
-$monospace-font-stack: Menlo, Monaco, Bitstream Vera Sans Mono, Lucida Console, Terminal, Consolas, Liberation Mono, DejaVu Sans Mono, Courier New, monospace
+// $serif-font-stack: 'Source Serif Pro', Georgia, Times, Times New Roman, serif
+$serif-font-stack: Georgia, Times, Times New Roman, serif
+// $sans-serif-font-stack: 'Roboto', Helvetica, Arial, sans-serif
+$monospace-font-stack: Source Code Pro, Courier New, monospace
 
 body
   background-color: #fff
   padding: 50px
-  font-family: $sans-serif-font-stack
+  font-family: $monospace-font-stack
   font-weight: 300
   color: #444
   font-size: 17px
@@ -20,6 +22,10 @@ h1, h2, h3, h4, h5, h6
   color: #222
   margin: 0 0 20px
   font-weight: 300
+
+.post-content
+  h1, h2, h3, h4, h5, h6
+    font-family: $monospace-font-stack
 
 h1, h2, h3
   line-height: 1.2
@@ -34,7 +40,8 @@ a
   color: #39c
   text-decoration: none
   &:hover
-    border-bottom: 2px solid rgba(0, 102, 153, 0.5)
+    border-bottom: 1px dotted #f74a52
+    color: #f74a52
   small
     font-size: 12px
     color: #777
@@ -46,9 +53,9 @@ a
   margin: 0 auto
 
 blockquote
-  border-left: 1px solid #eee
-  margin: 0
-  padding: 0 0 0 20px
+  border-left: 2px solid #eee
+  margin-left: 20px
+  padding-left: 20px
   font-style: italic
 
 code
@@ -56,7 +63,8 @@ code
   color: #333
   font-size: 15px
   background-color: #f0f0f0
-  padding: 2px 3px
+  padding: 3px 4px
+  white-space: nowrap
 
 // `code` font size relative to the header font size
 // 0.8em not 1em because the code font is usually larger than the serif font.
@@ -74,6 +82,7 @@ pre
   code
     background-color: #f8f8f8
     padding: 0
+    white-space: pre
 
 table
   width: 100%
@@ -93,12 +102,12 @@ th
 
 img
   max-width: 100%
-  box-shadow: 0 8px 20px rgba(0,0,0,0.35)
+  // box-shadow: 0 8px 20px rgba(0,0,0,0.35)
   margin: 60px auto
   display: block
 
-img.no-shadow
-  box-shadow: none
+// img.no-shadow
+  // box-shadow: none
 
 header
   width: 270px
@@ -143,6 +152,16 @@ footer
   color: #bbb
   font-size: 0.8em
 
+aside.contents
+  ol
+    li
+      list-style-type: none
+      font-weight: 300
+      margin-bottom: 0.5em
+    li.active
+      list-style-type: decimal
+      font-weight: 500
+
 .text-center
   text-align: center
 
@@ -168,7 +187,7 @@ footer
 .post-date, .post-tag, .post-comments
   color: #aaa
   font-size: 0.9em
-  font-family: $sans-serif-font-stack
+  font-family: $monospace-font-stack
 
 .left
   float: left

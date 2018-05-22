@@ -1,7 +1,7 @@
 $(eval LOCAL_GEM_PATH=$(HOME)/.gem/ruby/2.0.0/bin)
 
 dev:
-	tmux split-window -h "bundle exec jekyll serve; echo 'Press any key to continue'; read"
+	tmux split-window -h "bundle exec jekyll serve --unpublished; echo 'Press any key to continue'; read"
 	./utils/pug.sh &
 	@echo "open http://localhost:4000"
 

@@ -4,6 +4,7 @@ title: Tap CapsLock for Esc, hold for Ctrl
 date: 2016-08-31
 categories: posts
 tags: [productivity, keyboard, karabiner, seil, capslock]
+published: false
 ---
 
 Today I stumbled upon a post by Brendon Rapp on economyofeffort.com titled "_Beyond Ctrl: Make That Caps Lock Key Useful_".
@@ -39,6 +40,8 @@ In case the post ever goes away, here's how you do it on macOS:
 2. Go to _System Preferences > Keyboard > Modifier Keys_ and set _CapsLock_ as _No Action_.
 3. Open the _Seil_ app and under _Change the caps lock key_, set the keycode to _80_.
 4. Open the _Karabiner_ app. Go to _System Preferences > Security & Privacy > Accessibility_ and allow _Karabiner__AXNotifier_. In the _Karabiner_ app, search for and enable _F19 to Escape and Control_.
+
+<img class="no-shadow" alt="xkcd-borrow-your-laptop" src="https://imgs.xkcd.com/comics/borrow_your_laptop.png">
 
 [1]: http://www.economyofeffort.com/2014/08/11/beyond-ctrl-remap-make-that-caps-lock-key-useful/
 [2]: https://pqrs.org/osx/karabiner/

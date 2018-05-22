@@ -5,22 +5,33 @@ html(lang='en')
     meta(http-equiv='X-UA-Compatible' content='IE=edge')
     meta(name='viewport' content='width=device-width, initial-scale=1')
 
-    // css/js
+    //- css/js
     link(rel='stylesheet' type='text/css' href='/assets/css/app.css')
     link(rel='stylesheet' type='text/css' href='/assets/font-awesome-4.6.3/css/font-awesome.min.css')
     link(rel='shortcut icon' type='image/png' href='/assets/images/favicon.png')
 
-    script(type='text/javascript' src='/assets/js/app.js' async)
+    //- mathjax for latex equations
+    script(type='text/javascript' src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML' async)
+
     script(type='text/javascript' src='/assets/js/scale.fix.js' async)
+    | {% if page.categories %}
+    //- Posts specific js.
+    script(type='text/javascript' src='/assets/js/jquery-3.1.1.min.js')
+    script(type='text/javascript' src='/assets/js/jquery.smooth-scroll-2.1.2.min.js')
+    script(type='text/javascript' src='/assets/js/contents.js')
+    script(type='text/javascript' src='/assets/js/app.posts.js')
+    | {% else %}
+    //- General site js.
+    | {% endif %}
     // end-css/js
 
-    // feed
+    //- feed
     | {% feed_meta %}
-    // end-feed
+    //- end-feed
 
     // meta
-    - var title="{% if page.title %}{{ page.title | escape }} | {% endif %}{{ site.title | escape }}"
-    - var description="{% if page.title %}{{ page.excerpt | remove: '<p>' | remove: '</p>' }}{% else %}{{ site.description }}{% endif %}"
+    - var title="{% if page.title %}{{ page.title | strip_html | escape }} | {% endif %}{{ site.title | strip_html | escape }}"
+    - var description="{% if page.title %}{{ page.excerpt | strip_html | escape }}{% else %}{{ site.description | strip_html | escape }}{% endif %}"
     - var pageurl="{% assign meta_url = site.url | append: site.baseurl %}{{ page.url | prepend: meta_url }}"
     - var imageurl="{% if page.image %}{{ page.image | prepend: site.images_dir | prepend: site.url }}{% else %}{{ site.logo | prepend: site.images_dir | prepend: site.url }}{% endif %}"
     - var ogtype="{% if page.categories %}article{% else %}website{% endif %}"
@@ -48,7 +59,7 @@ html(lang='en')
         "headline": "{{ page.title }}",
         "datePublished": "{{ page.date | date: '%Y-%m-%d' }}",
         "dateModified": "{% if page.dateModified %}{{ page.dateModified | date: '%Y-%m-%d' }}{% else %}{{ page.date | date: '%Y-%m-%d' }}{% endif %}",
-        "description": "{{ page.excerpt | remove: '<p>' | remove: '</p>' }}",
+        "description": "{{ page.excerpt | remove: '<p>' | remove: '</p>' | strip_html | escape }}",
         "url": "#[=pageurl]",
         "author": "{{ site.author }}",
         "publisher": {
@@ -80,22 +91,29 @@ html(lang='en')
         nav
           ul
             li #[a(href="/") /home]
-            li #[a(href="/projects") /projects]
+            li #[a(href="/code") /code]
             li #[a(href="/posts") /posts]
             li #[a(href="/about") /about]
           ul
             li
-              a(href="https://facebook.com/s0nnyftw" target='_blank')
-                i.fa.fa-lg.fa-facebook
-            li
               a(href="https://github.com/sonph" target='_blank')
                 i.fa.fa-lg.fa-github
+            li
+              a(href="https://linkedin.com/in/sonph" target='_blank')
+                i.fa.fa-lg.fa-linkedin
             li
               a(href="https://twitter.com/_sonph" target='_blank')
                 i.fa.fa-lg.fa-twitter
             li
-              a(href="https://linkedin.com/in/sonph" target='_blank')
-                i.fa.fa-lg.fa-linkedin
+              a(href="https://facebook.com/sonph86" target='_blank')
+                i.fa.fa-lg.fa-facebook
+
+        | {% if page.categories %}
+        //- TODO: remove this hr tag if no subsections are found.
+        hr
+        //- Used to house the table of contents (app.posts.js).
+        aside.contents.
+        | {% endif %}
 
       section.
         {{ content }}
@@ -104,6 +122,16 @@ html(lang='en')
         Built with #[a(href='http://jekyllrb.com') Jekyll].
         And #[a(href='http://jade-lang.org') Pug].
         And #[a(href='https://fontawesome.io' target='_blank') Font Awesome].
-        Hosted with #[a(href='https://pages.github.com' target='_blank') Github Pages].
+        Served by #[a(href='https://pages.github.com' target='_blank') Github Pages].
         Theme based on #[a(href='https://github.com/orderedlist/minimal' target='_blank') Minimal].
         Content by #[a(href='/about') @sonph]. &lt;3
+
+    script.
+      //- Google Analytics
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-91949819-1', 'auto');
+      ga('send', 'pageview');
