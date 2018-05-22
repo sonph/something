@@ -2,6 +2,11 @@
 
 ## Build
 Dependencies:
+
+- `ruby`
+- `npm`
+- `brew`
+
 ```
 make install
 ```
