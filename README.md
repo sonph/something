@@ -9,7 +9,7 @@ make install
 Development flow:
 ```
 tmux new -s sonphgithubio
-make start
+make dev
 ```
 
 ## Notes
