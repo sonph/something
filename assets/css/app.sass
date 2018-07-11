@@ -2,7 +2,14 @@
 ---
 
 // @import url(https://fonts.googleapis.com/css?family=Roboto:300,500|Source+Serif+Pro)
-@import url(https://fonts.googleapis.com/css?family=Source+Code+Pro:300,400)
+// @import url(https://fonts.googleapis.com/css?family=Source+Code+Pro:300,400)
+
+@font-face
+  font-family: 'LCD Solid'
+  src: url('../fonts/LCD_Solid.ttf') format('truetype')
+
+
+$lcd-solid-font-stack: 'LCD Solid', monospace
 
 // $serif-font-stack: 'Source Serif Pro', Georgia, Times, Times New Roman, serif
 $serif-font-stack: Georgia, Times, Times New Roman, serif
@@ -12,11 +19,12 @@ $monospace-font-stack: Source Code Pro, Courier New, monospace
 body
   background-color: #fff
   padding: 50px
-  font-family: $monospace-font-stack
+  font-family: $lcd-solid-font-stack
   font-weight: 300
   color: #444
-  font-size: 17px
+  font-size: 15px
   line-height: 1.8
+  cursor: url('../cursors/90s_pointer.png'), default
 
 h1, h2, h3, h4, h5, h6
   color: #222
@@ -42,6 +50,7 @@ a
   &:hover
     border-bottom: 1px dotted #f74a52
     color: #f74a52
+    cursor: url('../cursors/90s_hand.png'), default
   small
     font-size: 12px
     color: #777
