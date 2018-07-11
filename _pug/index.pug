@@ -2,20 +2,31 @@
 | layout: default
 | ---
 | 
-.home
-  h1 Posts
-  ul.post-list
-    //- | {% for post in site.categories.posts limit: 5 %} FOR THE FUTURE
-    | {% for post in site.posts limit: 5 %}
-    li
-      div
-        h2.post-title
-          a(href='{{ post.url | prepend: site.baseurl }}') {{ post.title }}
-        span.post-meta.post-date {{ post.date | date: "%b %-d, %Y" }}
+div @sonph
 
-      .post-meta.post-excerpt
-        | {{ post.excerpt }}
-    | {% endfor %}
+br
+div Son "Sonny" Pham
 
-  p.meta.text-right
-    a(href='/posts') See all posts...
+br
+ul
+  li
+    a(href="https://github.com/sonph") github
+  li
+    a(href="https://linkedin.com/in/sonph") linkedin
+  li
+    a(href="https://sonpham.me/resume.pdf") resume.pdf
+
+br
+div
+  b Please note
+  div I'm not looking for job opportunities at the moment.
+  div However feel free to connect with me on linkedin (link above 👆)
+
+br
+div(style="font-size: 1.5em; text-align: center; width: 100%;") 👋
+div(style="text-align: center; width: 100%;")
+  | I like
+  span(style="font-size: 1.5em;")  🍉
+
+img(src="/assets/images/welcome_to_the_internet.gif"
+    alt="welcome to the internet gif")
