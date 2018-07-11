@@ -1,14 +1,21 @@
-pre
-  | @sonph
-  |
-  | Son "Sonny" Pham
-  |
-  | - 
-  a(href="https://github.com/sonph") github
-  |
-  | - 
-  a(href="https://linkedin.com/in/sonph") linkedin
-  |
-  | - 
-  a(href="https://sonpham.me/resume.pdf") resume.pdf
+| ---
+| layout: default
+| ---
+| 
+.home
+  h1 Posts
+  ul.post-list
+    //- | {% for post in site.categories.posts limit: 5 %} FOR THE FUTURE
+    | {% for post in site.posts limit: 5 %}
+    li
+      div
+        h2.post-title
+          a(href='{{ post.url | prepend: site.baseurl }}') {{ post.title }}
+        span.post-meta.post-date {{ post.date | date: "%b %-d, %Y" }}
 
+      .post-meta.post-excerpt
+        | {{ post.excerpt }}
+    | {% endfor %}
+
+  p.meta.text-right
+    a(href='/posts') See all posts...
